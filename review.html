@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デリカリー -DELICURRY- | ページタイトル |</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./js/pageTop.js"></script>
+
+
+    <script>
+        $(function () {
+            $('#hamburger').on('click', function () {
+                $('#hamburger').toggleClass("open");
+
+                if ($('body').css('overflow') === "hidden") {
+                    $('body').css('overflow', '')
+                } else {
+                    $('body').css('overflow', 'hidden')
+
+                }
+                $('#header-menu').slideToggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // #で始まるアンカーをクリックした場合に処理
+            $('a[href^="#"]').click(function () {
+                // スクロールの速度
+                var speed = 500; // ミリ秒
+                // アンカーの値取得
+                var href = $(this).attr("href");
+                // 移動先を取得
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                // 移動先を数値で取得
+                var position = target.offset().top - 75;
+                // スムーススクロール
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body id="about-page">
+    <nav id="pc-header">
+        <a class="logo-link" href="index.html"> <img src="./images/logo.png" alt="デリカリー" class="logo"></a>
+
+        <ul>
+            <li><a href="about.html" class="footer-link">デリカリーとは</a></li>
+            <li><a href="menu.html" class="footer-link">メニュー</a></li>
+            <li><a href="review.html" class="footer-link">お客様の声</a></li>
+            <li><a href="qa.html" class="footer-link">よくある質問</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-nav">
+        <a href="index.html"><img src="./images/logo.png" alt="デリカリー" class="logo"></a>
+        <a id="hamburger"><span></span></button>
+    </div>
+
+    <header class="sub-header">
+        <nav id="header-menu">
+            <ul>
+                <li><a href="about.html" class="footer-link">デリカリーとは</a></li>
+                <li><a href="menu.html" class="footer-link">メニュー</a></li>
+                <li><a href="review.html" class="footer-link">お客様の声</a></li>
+                <li><a href="qa.html" class="footer-link">よくある質問</a></li>
+            </ul>
+        </nav>
+        <h1 class="page-header">ページタイトル</h1>
+    </header>
+
+
+    <footer>
+        <div class="inner">
+            <a href="index.html"><img src="./images/logo_white.png" alt="" class="footer-logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="about.html" class="footer-link">デリカリーとは</a></li>
+                    <li><a href="menu.html" class="footer-link">メニュー</a></li>
+                    <li><a href="review.html" class="footer-link">お客様の声</a></li>
+                    <li><a href="qa.html" class="footer-link">よくある質問</a></li>
+                </ul>
+            </nav>
+
+
+        </div> <small>Copyright 2025 DELICURRY&copy;. All Rights Reserved.</small>
+
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

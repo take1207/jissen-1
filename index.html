@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デリカリー -DELICURRY-</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./js/pageTop.js"></script>
+
+
+    <script>
+        $(function () {
+            $('#hamburger').on('click', function () {
+                $('#hamburger').toggleClass("open");
+
+                if ($('body').css('overflow') === "hidden") {
+                    $('body').css('overflow', '')
+                } else {
+                    $('body').css('overflow', 'hidden')
+
+                }
+                $('#header-menu').slideToggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // #で始まるアンカーをクリックした場合に処理
+            $('a[href^="#"]').click(function () {
+                // スクロールの速度
+                var speed = 500; // ミリ秒
+                // アンカーの値取得
+                var href = $(this).attr("href");
+                // 移動先を取得
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                // 移動先を数値で取得
+                var position = target.offset().top - 75;
+                // スムーススクロール
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body id="home">
+    <nav id="pc-header">
+        <a class="logo-link" href="index.html"> <img src="./images/logo.png" alt="デリカリー" class="logo"></a>
+
+        <ul>
+            <li><a href="about.html" class="footer-link">デリカリーとは</a></li>
+            <li><a href="menu.html" class="footer-link">メニュー</a></li>
+            <li><a href="review.html" class="footer-link">お客様の声</a></li>
+            <li><a href="qa.html" class="footer-link">よくある質問</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-nav">
+        <a href="index.html"><img src="./images/logo.png" alt="デリカリー" class="logo"></a>
+        <a id="hamburger"><span></span></button>
+    </div>
+
+    <header>
+        <nav id="header-menu">
+            <ul>
+                <li><a href="about.html" class="footer-link">デリカリーとは</a></li>
+                <li><a href="menu.html" class="footer-link">メニュー</a></li>
+                <li><a href="review.html" class="footer-link">お客様の声</a></li>
+                <li><a href="qa.html" class="footer-link">よくある質問</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="top-header">デリカリーで手軽においしく、<br>
+            あなたにぴったりのカレーを届けます</h1>
+        <a href="#plan" class="more-btn">プランを見る</a>
+    </header>
+    <main>
+        <section id="about">
+            <div class="inner">
+                <div class="inner-text">
+                    <h2 class="section-header">デリカリーとは？</h2>
+                    <p class="item-text">デリカリーとは、自宅にいるだけで５つ星シェフが調理したおいしいカレーを届けるサービスです。おいしく健康に、さまざまな種類のカレーをご用意しております。
+                    </p>
+                </div>
+                <img src="./images/about_box.webp" alt="" class="inner-img">
+            </div>
+            <a href="about.html" class="more-btn">詳しく見る</a>
+        </section>
+        <section id="feature">
+            <h2 class="section-header">デリカリーの特徴</h2>
+            <div class="inner">
+                <div class="feature-item">
+                    <h3 class="item-header">ミシュランシェフが監修</h3>
+                    <p class="item-text">デリカリーは国内外13店舗のミシュランガイド掲載店に勤めるシェフが監修を行い調理されております。</p>
+                    <img src="./images/feature_chef.webp" alt="ミシュランシェフ">
+                </div>
+                <div class="feature-item">
+                    <h3 class="item-header">定期便でお得に配達</h3>
+                    <p class="item-text">定期便で注文することで1食最大300円割引になる他、次回使えるクーポンを頻繁に配信されております。</p>
+                    <img src="./images/feature_phone.webp" alt="定期便">
+                </div>
+                <div class="feature-item">
+                    <h3 class="item-header">お客様の99%がリピート</h3>
+                    <p class="item-text">デリカリーのお客様リピート率は99%と、宅食、デリバリー業界ではトップクラスの満足度を誇っております。</p>
+                    <img src="./images/feature_thumb.webp" alt="親指を立てる">
+                </div>
+            </div>
+            <a href="menu.html" class="more-btn">メニューを見る</a>
+        </section>
+        <section id="plan">
+            <h2 class="section-header">プランを選ぶ</h2>
+            <div class="inner">
+                <div class="plan-item">
+                    <h3 class="item-header">お手軽2週間4食プラン</h3>
+                    <p class="place"><span class="yen">&yen;</span>3,600~<span class="detail-place">(&yen;1200/食)</span>
+                    </p>
+                    <p class="item-text">お試し購入にぴったりな2週間4食プランです。たまにカレーを食べたいという方にお勧めです。</p>
+                    <a href="order.html" class="buy-btn">申し込む</a>
+                </div>
+                <div class="plan-item">
+                    <p class="recommended">&#92;&#92;一番売れてます//</p>
+                    <h3 class="item-header">おすすめ2週間6食プラン</h3>
+                    <p class="place"><span class="yen">&yen;</span>5,800~<span class="detail-place">(&yen;966/食)</span>
+                    </p>
+                    <p class="item-text">定番の2週間6食プランです。日常的にカレーを食べる、カレー好きの方にピッタリなプランです。</p>
+                    <a href="order.html" class="buy-btn">申し込む</a>
+                </div>
+                <div class="plan-item">
+                    <h3 class="item-header">よくばり2週間10食プラン</h3>
+                    <p class="place"><span class="yen">&yen;</span>8,950~<span class="detail-place">(&yen;895/食)</span>
+                    </p>
+                    <p class="item-text">カレーを毎日のように食べたいという方にピッタリ！割引率も高くコスパを重視する方にお勧めです。</p>
+                    <a href="order.html" class="buy-btn">申し込む</a>
+                </div>
+            </div>
+        </section>
+        <section id="review">
+            <h2 class="section-header">お客様の声</h2>
+            <div class="inner">
+                <div class="review-item">
+                    <img src="./images/review_1.webp" alt="" class="cus-img">
+                    <div class="review-text">
+                        <h3 class="item-header">リピートしてます</h3>
+                        <p class="cus_info">Sさん25歳男性 山梨県在住</p>
+                        <p class="item-text">
+                            デリカリーを知る前までは自分でカレーを調理してたのですが、自分で作るよりクオリティーが高く、なおかつお財布にやさしい値段なのでリピートしております。何回食べても飽きない味が最高です。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="review-item">
+                    <img src="./images/review_2.webp" alt="" class="cus-img">
+                    <div class="review-text">
+
+                        <h3 class="item-header">カレー好きには欠かせないサービス！</h3>
+                        <p class="cus_info">Oさん 31歳男性 群馬県在住</p>
+                        <p class="item-text">
+                            私はカレーを毎日のように食べるのですが、調理が毎回面倒だということで何か良いサービスがないかというときに、デリカリーに出会いました。味もコスパもよく、もう1年も利用しています。今後も使い続けたいです。
+                        </p>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <img src="./images/review_3.webp" alt="" class="cus-img">
+                    <div class="review-text">
+
+                        <h3 class="item-header">正直甘く見てた</h3>
+                        <p class="cus_info">Wさん 28歳女性 東京都在住</p>
+                        <p class="item-text">
+                            初めて注文した際は、レトルトカレーに毛が生えた程度の味だと予想していたのですが、普通にお店の味でびっくりしました！
+                            申し込もうか悩んでいる方は後悔しないと思うので一度注文してみてほしいです！</p>
+                    </div>
+                </div>
+            </div>
+            <a href="review.html" class="more-btn">さらに見る</a>
+
+        </section>
+        <section id="qa">
+            <h2 class="section-header">よくあるご質問</h2>
+            <details class="qa-item">
+                <summary>
+                    <div class="summary-inner">
+                        <h3 class="qa-header">送料はかかりますか？<span class="icon"></span></h3>
+                    </div>
+
+                </summary>
+                <div class="answer">
+                    <h3 class="qa-header">全国一律700円頂戴しております。</h3>
+                    <p class="answer-text">1配送に対し送料全国一律700円のほかに、注文手数料200円をいただいております。
+                        なお、商品返品の際、送料の返金はいたしかねますのでご了承ください。</p>
+                </div>
+            </details>
+            <details class="qa-item">
+                <summary>
+
+                    <div class="summary-inner">
+                        <h3 class="qa-header">食材の産地を知りたいです。<span class="icon"></span></h3>
+                    </div>
+
+                </summary>
+                <div class="answer">
+                    <h3 class="qa-header">全国一律700円頂戴しております。</h3>
+                    <p class="answer-text">1配送に対し送料全国一律700円のほかに、注文手数料200円をいただいております。
+                        なお、商品返品の際、送料の返金はいたしかねますのでご了承ください。</p>
+                </div>
+            </details>
+            <details class="qa-item">
+                <summary>
+                    <div class="summary-inner">
+                        <h3 class="qa-header">返品はできますか？<span class="icon"></span></h3>
+                    </div>
+
+                </summary>
+                <div class="answer">
+                    <h3 class="qa-header">全国一律700円頂戴しております。</h3>
+                    <p class="answer-text">1配送に対し送料全国一律700円のほかに、注文手数料200円をいただいております。
+                        なお、商品返品の際、送料の返金はいたしかねますのでご了承ください。</p>
+                </div>
+            </details>
+            <details class="qa-item">
+                <summary>
+                    <div class="summary-inner">
+                        <h3 class="qa-header">注文後のキャンセルはできますか？<span class="icon"></span></h3>
+                    </div>
+
+                </summary>
+                <div class="answer">
+                    <h3 class="qa-header">全国一律700円頂戴しております。</h3>
+                    <p class="answer-text">1配送に対し送料全国一律700円のほかに、注文手数料200円をいただいております。
+                        なお、商品返品の際、送料の返金はいたしかねますのでご了承ください。</p>
+                </div>
+            </details>
+            <a href="qa.html" class="more-btn">さらに見る</a>
+        </section>
+        <footer>
+            <div class="inner">
+                <a href="index.html"><img src="./images/logo_white.png" alt="" class="footer-logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="about.html" class="footer-link">デリカリーとは</a></li>
+                        <li><a href="menu.html" class="footer-link">メニュー</a></li>
+                        <li><a href="review.html" class="footer-link">お客様の声</a></li>
+                        <li><a href="qa.html" class="footer-link">よくある質問</a></li>
+                    </ul>
+                </nav>
+
+
+            </div> <small>Copyright 2025 DELICURRY&copy;. All Rights Reserved.</small>
+
+        </footer>
+    </main>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
