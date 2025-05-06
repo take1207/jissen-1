@@ -170,7 +170,7 @@ body{
     display: none;
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:1200px) {
     #pc-header{
         z-index: 9000;
         position: fixed;
@@ -187,6 +187,8 @@ body{
         justify-content: space-between;
         margin: 0 auto;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+        transition:  transform 0.5s;
+
 
     }
     #pc-header .logo-link{
@@ -215,7 +217,7 @@ body{
     }
 
     #pc-header a:hover{
-        opacity: .8;
+        opacity: .5;
         transition: .2s;
         
     }
@@ -252,7 +254,10 @@ body{
 .mobile-nav.js_hide{
     transform:  translateY(-100%);
 }
-@media screen and (min-width:769px) {
+#pc-header.js_hide{
+    transform:  translate(-50%,-300%);
+}
+@media screen and (min-width:1199px) {
     .mobile-nav{
         display: none;
     }   
@@ -479,6 +484,8 @@ header .top-header{
     color: #FF904B;
     top: 18px;
     left: 50%;
+    width: 200px;
+text-align: center;
     transform: translateX(-50%);
 }
 
@@ -768,7 +775,8 @@ footer nav a{
 }
 
 footer nav a:hover{
-    opacity: .8;
+    opacity: .5;
+    transition: .2s;
 }
 
 footer small{
@@ -919,7 +927,9 @@ footer small{
 
 }
 
-.campaign-yen{
+
+
+.campaign-yen,.off{
     font-size: 2rem;
 }
 
@@ -941,4 +951,68 @@ footer small{
 
 .limit span{
     font-size: 3.2rem;
+}
+.campaign .buy-btn{
+    margin-top: 30px;
+}
+
+@media screen and (min-width:769px) {
+    .campaign-price{
+        font-size: 5rem;
+    }
+    .campaign-yen,.off{
+        font-size: 2.5rem;
+    }
+
+
+
+    .limit span{
+        font-size: 4.2rem;
+        line-height: 115%;
+    }
+
+
+
+    
+
+}
+@media screen and (min-width:769px) {
+
+    #menu {
+        max-width: 1300px;
+        width: calc(1300 / 1920 * 100%);
+        justify-content: space-around;
+    }
+
+    .menu-item{
+        width: 250px
+       }
+    .menu-item img{
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .menu-title{
+        font-size: 1.6rem;        
+        padding: 0 20px;
+
+    }
+
+    .menu-description{
+        margin-top: 10px;
+        font-size: 1.4rem;
+        padding: 0 20px;
+    }
+
+    .menu-energy,.menu-protein{
+        font-size: 1.4rem;
+        padding: 0 20px;
+
+    }
+    .menu-energy{
+        margin-top: 42px;
+    }
+    .menu-protein{
+        padding-bottom: 20px;
+    }
 }
