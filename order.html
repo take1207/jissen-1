@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>デリカリー -DELICURRY- | ページタイトル |</title>
+    <title>お申込み | デリカリー -DELICURRY-</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.svg">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -79,29 +80,29 @@
         <h1 class="page-header">申し込み</h1>
     </header>
     <div id="order">
-        <form class="h-adr" action="">
+        <form id="order-form" class="h-adr" action="">
             <div class="order-plan">
                 <h2 class="section-header">お申込みプラン</h2>
-                <select class="customized plan-select">
-                    <option>お手軽2週間4食プラン<span class="order-icon"></span></option>
-                    <option selected>おすすめ2週間6食プラン<span class="order-icon"></span></option>
-                    <option>よくばり2週間10食プラン<span class="order-icon"></span></option>
+                <select id="pull-down" name="plan" class="customized plan-select">
+                    <option value="3600">お手軽2週間4食プラン<span class="order-icon"></span></option>
+                    <option selected value="5800">おすすめ2週間6食プラン<span class="order-icon"></span></option>
+                    <option value="8950">よくばり2週間10食プラン<span class="order-icon"></span></option>
                 </select>
             </div>
             <div class="order-option">
                 <p class="recommended">&#92;&#92;ご一緒にいかがですか？&frasl;&frasl;</p>
                 <h2 class="section-header">オプション</h2>
                 <label class="option-check item-text" for="option-spoon">
-                    <input type="checkbox" class="option-input" id="option-spoon" name="spoon"><span
+                    <input type="checkbox" value="5980" class="option-input" id="option-spoon" name="option"><span
                         class="option-dummy"></span><span class="option-text">職人手製カレースプーン
                         (￥5,980)</span>
                 </label>
                 <label class="option-check item-text" for="option-bag">
-                    <input type="checkbox" class="option-input" id="option-bag" name="pot"><span
+                    <input type="checkbox" value="15400" class="option-input" id="option-bag" name="option"><span
                         class="option-dummy"></span><span class="option-text">冷凍保存バッグ (￥15,400)</span>
                 </label>
                 <label class="option-check item-text" for="option-pot">
-                    <input type="checkbox" class="option-input" id="option-pot" name="pot"><span
+                    <input type="checkbox" value="55000" class="option-input" id="option-pot" name="option"><span
                         class="option-dummy"></span><span class="option-text">カレー20人前調理用寸胴 (￥55,000)</span>
                 </label>
 
@@ -163,10 +164,12 @@
                             コンビニ支払い</span></label>
                 </div>
 
+                <div class="order-pay">
+                    <p class="amount">初月お支払金額</p>
+                    <p class="money"><span class="yen">&yen;</span><span id="total"></span></p>
+                    <a href="#" class="buy-btn">申込み確定</a>
+                </div>
 
-                <p class="amount">初月お支払金額</p>
-                <p class="money"><span class="yen">&yen;</span>5,300</p>
-                <a href="#" class="buy-btn">申込み確定</a>
 
         </form>
     </div>
@@ -189,6 +192,7 @@
 
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/order.js"></script>
 
 </body>
 
