@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./js/pageTop.js"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 
 
     <script>
@@ -50,7 +51,7 @@
     </script>
 </head>
 
-<body id="about-page">
+<body id="order-page">
     <nav id="pc-header">
         <a class="logo-link" href="index.html"> <img src="./images/logo.png" alt="デリカリー" class="logo"></a>
 
@@ -75,9 +76,101 @@
                 <li><a href="qa.html" class="footer-link">よくある質問</a></li>
             </ul>
         </nav>
-        <h1 class="page-header">ページタイトル</h1>
+        <h1 class="page-header">申し込み</h1>
     </header>
+    <div id="order">
+        <form class="h-adr" action="">
+            <div class="order-plan">
+                <h2 class="section-header">お申込みプラン</h2>
+                <select class="customized plan-select">
+                    <option>お手軽2週間4食プラン<span class="order-icon"></span></option>
+                    <option selected>おすすめ2週間6食プラン<span class="order-icon"></span></option>
+                    <option>よくばり2週間10食プラン<span class="order-icon"></span></option>
+                </select>
+            </div>
+            <div class="order-option">
+                <p class="recommended">&#92;&#92;ご一緒にいかがですか？&frasl;&frasl;</p>
+                <h2 class="section-header">オプション</h2>
+                <label class="option-check item-text" for="option-spoon">
+                    <input type="checkbox" class="option-input" id="option-spoon" name="spoon"><span
+                        class="option-dummy"></span><span class="option-text">職人手製カレースプーン
+                        (￥5,980)</span>
+                </label>
+                <label class="option-check item-text" for="option-bag">
+                    <input type="checkbox" class="option-input" id="option-bag" name="pot"><span
+                        class="option-dummy"></span><span class="option-text">冷凍保存バッグ (￥15,400)</span>
+                </label>
+                <label class="option-check item-text" for="option-pot">
+                    <input type="checkbox" class="option-input" id="option-pot" name="pot"><span
+                        class="option-dummy"></span><span class="option-text">カレー20人前調理用寸胴 (￥55,000)</span>
+                </label>
 
+
+            </div>
+            <div class="order-person">
+                <h2 class="section-header">お客様情報入力</h2>
+                <div class="name">
+                    <div class="person-item">
+                        <label for="sei">性</label>
+                        <input type="text" id="sei">
+                    </div>
+                    <div class="person-item">
+                        <label for="na">名</label>
+                        <input type="text" id="na">
+                    </div>
+                </div>
+                <div class="name-huri">
+                    <div class="person-item">
+                        <label for="sei-huri">姓(フリガナ)</label>
+                        <input type="text" id="sei-huri">
+                    </div>
+                    <div class="person-item">
+                        <label for="na-huri">名(フリガナ)</label>
+                        <input type="text" id="na-huri">
+                    </div>
+                </div>
+                <label for="tel">電話番号 (ハイフン不要)</label>
+                <input type="number" id="tel">
+
+                <input type="hidden" class="p-country-name" value="Japan">
+
+                <label for="post">郵便番号(住所自動入力)</label>
+                <input type="number" class="p-postal-code" maxlength="8" id="post">
+
+                <label for="ken">都道府県</label>
+                <input type="text" class="p-region" id="ken">
+
+                <label for="si">市町村</label>
+                <input type="text" class="p-locality" id="si">
+
+                <label for="street" class="p-street-address">町域</label>
+                <input type="text" id="street">
+
+                <label for="address" class="p-extended-address">以降の住所</label>
+                <input type="text" id="address">
+
+
+                <p class="payment">お支払方法</p>
+                <div class="payment-item">
+                    <label for="credit"><input class="payment-input" type="radio" name="pay" id="credit"><span
+                            class="payment-dummy"></span><span class="payment-text">クレジットカード</span></label>
+
+                    <label for="bank"><input class="payment-input" type="radio" name="pay" id="bank"><span
+                            class="payment-dummy"></span><span class="payment-text">銀行振り込み</span></label>
+
+                    <label for="convenience"><input class="payment-input" type="radio" name="pay" id="convenience"><span
+                            class="payment-dummy"></span><span class="payment-text">
+                            コンビニ支払い</span></label>
+                </div>
+
+
+                <p class="amount">初月お支払金額</p>
+                <p class="money"><span class="yen">&yen;</span>5,300</p>
+                <a href="#" class="buy-btn">申込み確定</a>
+
+        </form>
+    </div>
+    </div>
 
     <footer>
         <div class="inner">
