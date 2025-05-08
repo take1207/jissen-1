@@ -942,10 +942,11 @@ footer small{
 }
 
 .menu-item{
+    position: relative;
     width: calc(100% - 50% - 10px);
+    height: 230px;
     background-color: #FBFBFB;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .menu-item img{
@@ -968,9 +969,19 @@ footer small{
 }
 
 .menu-energy,.menu-protein{
-        padding: 0 10px;
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px;
     font-size: .8rem;
     line-height: 115%;
+}
+
+.menu-energy{
+    bottom: 25px;
+}
+
+.menu-protein{
+    bottom: 15px;
 }
 
 
@@ -1059,6 +1070,7 @@ footer small{
     }
 
     .menu-item{
+        height: 445px;
         width: 250px
        }
     .menu-item img{
@@ -1084,10 +1096,10 @@ footer small{
 
     }
     .menu-energy{
-        margin-top: 42px;
+        bottom: 30px;
     }
     .menu-protein{
-        padding-bottom: 20px;
+        bottom: 10px;
     }
 }
 
