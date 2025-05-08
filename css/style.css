@@ -734,6 +734,8 @@ summary::-webkit-details-marker{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    transform: rotate(0deg);
+    transition: transform .3s;
 }
 details[open] .icon::before{
         transform: rotate(180deg);
