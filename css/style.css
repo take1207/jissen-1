@@ -736,18 +736,11 @@ summary::-webkit-details-marker{
     background-position: center center;
 }
 details[open] .icon::before{
-    animation: 0.2s open-animation forwards;
-}
-
-@keyframes open-animation{
-    from{
-        transform: rotate(0deg);
-    }
-
-    to{
         transform: rotate(180deg);
-    }
+        transition: transform .3s;
 }
+
+
 @media screen and (min-width:769px) {
     #qa{
         padding: 100px 0;
