@@ -381,6 +381,21 @@ header .top-header{
     }
 }
 
+
+
+.scroll{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .8s;
+    transform: translateY(150px);
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 #about{
     background-color: #F4C16F;
     padding: 50px 0 30px;
@@ -930,6 +945,7 @@ footer small{
     width: calc(100% - 50% - 10px);
     background-color: #FBFBFB;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .menu-item img{
@@ -937,6 +953,8 @@ footer small{
     object-fit: cover;
     height: 100px;
 }
+
+
 .menu-title{
     padding: 0 10px;
     font-size: 1.2rem;
